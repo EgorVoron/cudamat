@@ -35,11 +35,7 @@ EXPORT const char* get_last_clib_error() {
 }
 
 EXPORT int cublas_init() {
-    cublasInit();
-    if (check_cublas_error())
-        return CUBLAS_ERROR;
-    else
-        return 0;
+    return cublasInit();
 }
 
 EXPORT int cublas_shutdown() {
